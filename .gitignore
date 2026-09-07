@@ -9,6 +9,7 @@ target/
 # Test execution output
 screenshots/
 reports/
+test-output/
 
 # Logs
 *.log

@@ -26,7 +26,7 @@ pipeline {
 
     tools {
 
-        jdk 'JDK17'
+        jdk 'jdk-21.0.10'
 
         maven 'Maven-3'
     }

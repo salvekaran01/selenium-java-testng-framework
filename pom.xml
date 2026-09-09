@@ -36,6 +36,8 @@
 		<slf4j.version>2.0.17</slf4j.version>
 
 		<commons.io.version>2.20.0</commons.io.version>
+		
+		<testng.groups>regression</testng.groups>
 
 	</properties>
 
@@ -194,6 +196,8 @@
 						</suiteXmlFile>
 
 					</suiteXmlFiles>
+					
+					<groups>${testng.groups}</groups>
 
 				</configuration>
 

@@ -38,12 +38,26 @@ public final class ConfigReader {
 
     public static String get(String key) {
 
-        String value = properties.getProperty(key);
+        // First check JVM/System property
+        String systemValue =
+                System.getProperty(key);
 
-        if (value == null || value.trim().isEmpty()) {
+        if (systemValue != null
+                && !systemValue.trim().isEmpty()) {
+
+            return systemValue.trim();
+        }
+
+        // Otherwise read from config.properties
+        String value =
+                properties.getProperty(key);
+
+        if (value == null
+                || value.trim().isEmpty()) {
 
             throw new RuntimeException(
-                    "Configuration property not found: " + key
+                    "Configuration property not found: "
+                            + key
             );
         }
 
